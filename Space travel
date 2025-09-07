@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class SpaceTravel {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        double marsDistance = 225;   
+        double moonDistance = 0.384; 
+        double jupiterDistance = 778; 
+
+        System.out.println("Choose your destination:");
+        System.out.println("1. Moon");
+        System.out.println("2. Mars");
+        System.out.println("3. Jupiter");
+        int choice = sc.nextInt();
+
+        System.out.print("Enter your speed in km/s: ");
+        double speed = sc.nextDouble();
+
+        double distance = 0;
+
+        switch (choice) {
+            case 1:
+                distance = moonDistance * 1_000_000; 
+                break;
+            case 2:
+                distance = marsDistance * 1_000_000;
+                break;
+            case 3:
+                distance = jupiterDistance * 1_000_000;
+                break;
+            default:
+                System.out.println("Invalid choice!");
+                System.exit(0);
+        }
+
+        
+        double timeSeconds = distance / speed;
+        double timeDays = timeSeconds / (60 * 60 * 24);
+
+        System.out.printf("Time to reach your destination: %.2f days%n", timeDays);
+
+        sc.close();
+    }
+}
+output
+Choose your destination:
+1. Moon
+2. Mars
+3. Jupiter
