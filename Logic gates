@@ -1,0 +1,56 @@
+public class LogicGatesDemo {
+    public static void main(String[] args) {
+        LogicGates gates = new LogicGates();
+
+        boolean a = true;
+        boolean b = false;
+
+        System.out.println("Inputs: a = " + a + ", b = " + b);
+        System.out.println("AND  : " + gates.AND(a, b));
+        System.out.println("OR   : " + gates.OR(a, b));
+        System.out.println("NOT a: " + gates.NOT(a));
+        System.out.println("XOR  : " + gates.XOR(a, b));
+        System.out.println("NAND : " + gates.NAND(a, b));
+        System.out.println("NOR  : " + gates.NOR(a, b));
+    }
+}
+
+class LogicGates {
+   
+    public boolean AND(boolean a, boolean b) {
+        return a && b;
+    }
+
+  
+    public boolean OR(boolean a, boolean b) {
+        return a || b;
+    }
+
+
+    public boolean NOT(boolean a) {
+        return !a;
+    }
+
+  
+    public boolean XOR(boolean a, boolean b) {
+        return a ^ b;
+    }
+
+    
+    public boolean NAND(boolean a, boolean b) {
+        return !(a && b);
+    }
+
+
+    public boolean NOR(boolean a, boolean b) {
+        return !(a || b);
+    }
+}
+output
+Inputs: a = true, b = false
+AND  : false
+OR   : true
+NOT a: false
+XOR  : true
+NAND : true
+NOR  : false
