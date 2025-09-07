@@ -1,0 +1,66 @@
+public class ConditionalStatementsDemo {
+    public static void main(String[] args) {
+        int number = 10;
+
+      
+        if (number > 0) {
+            System.out.println("if: Number is positive");
+        }
+
+        // 2. if-else statement
+        if (number % 2 == 0) {
+            System.out.println("if-else: Number is even");
+        } else {
+            System.out.println("if-else: Number is odd");
+        }
+
+    
+        int marks = 65;
+        if (marks >= 90) {
+            System.out.println("if-else-if: Grade A+");
+        } else if (marks >= 75) {
+            System.out.println("if-else-if: Grade A");
+        } else if (marks >= 50) {
+            System.out.println("if-else-if: Grade B");
+        } else {
+            System.out.println("if-else-if: Fail");
+        }
+
+        
+        int age = 20;
+        int weight = 55;
+        if (age >= 18) {
+            if (weight > 50) {
+                System.out.println("nested if: Eligible to donate blood");
+            } else {
+                System.out.println("nested if: Underweight");
+            }
+        } else {
+            System.out.println("nested if: Underage");
+        }
+
+     
+        int day = 3;
+        switch (day) {
+            case 1: System.out.println("switch: Monday"); break;
+            case 2: System.out.println("switch: Tuesday"); break;
+            case 3: System.out.println("switch: Wednesday"); break;
+            case 4: System.out.println("switch: Thursday"); break;
+            case 5: System.out.println("switch: Friday"); break;
+            case 6: System.out.println("switch: Saturday"); break;
+            case 7: System.out.println("switch: Sunday"); break;
+            default: System.out.println("switch: Invalid day");
+        }
+
+        
+        String result = (number > 5) ? "ternary: Greater than 5" : "ternary: Less than or equal to 5";
+        System.out.println(result);
+    }
+}
+output
+if: Number is positive
+if-else: Number is even
+if-else-if: Grade B
+nested if: Eligible to donate blood
+switch: Wednesday
+ternary: Greater than 5
