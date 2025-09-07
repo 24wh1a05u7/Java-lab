@@ -1,0 +1,51 @@
+import java.util.*;
+
+class RoadMap {
+    private Map<String, List<String>> map = new HashMap<>();
+
+    
+    public void addCity(String city) {
+        map.putIfAbsent(city, new ArrayList<>());
+    }
+
+    
+    public void addRoad(String city1, String city2) {
+        map.get(city1).add(city2);
+        map.get(city2).add(city1); // since roads are two-way
+    }
+
+    
+    public void display() {
+        for (String city : map.keySet()) {
+            System.out.println(city + " is connected to " + map.get(city));
+        }
+    }
+}
+
+public class RoadMapProgram {
+    public static void main(String[] args) {
+        RoadMap rm = new RoadMap();
+
+        
+        rm.addCity("Hyderabad");
+        rm.addCity("Mumbai");
+        rm.addCity("Delhi");
+        rm.addCity("Chennai");
+
+
+        rm.addRoad("Hyderabad", "Mumbai");
+        rm.addRoad("Hyderabad", "Delhi");
+        rm.addRoad("Mumbai", "Chennai");
+
+        
+        rm.display();
+    }
+}
+output
+Hyderabad is connected to [Mumbai, Delhi]
+Mumbai is connected to [Hyderabad, Chennai]
+Delhi is connected to [Hyderabad]
+Chennai is connected to [Mumbai]
+
+
+    
