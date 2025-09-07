@@ -1,0 +1,101 @@
+public class AllOperations {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+
+        System.out.println("---- Arithmetic Operations ----");
+        System.out.println("a + b = " + (a + b));
+        System.out.println("a - b = " + (a - b));
+        System.out.println("a * b = " + (a * b));
+        System.out.println("a / b = " + (a / b));
+        System.out.println("a % b = " + (a % b));
+
+        System.out.println("\n---- Relational Operations ----");
+        System.out.println("a == b : " + (a == b));
+        System.out.println("a != b : " + (a != b));
+        System.out.println("a > b  : " + (a > b));
+        System.out.println("a < b  : " + (a < b));
+        System.out.println("a >= b : " + (a >= b));
+        System.out.println("a <= b : " + (a <= b));
+
+        System.out.println("\n---- Logical Operations ----");
+        boolean x = true, y = false;
+        System.out.println("x && y = " + (x && y));
+        System.out.println("x || y = " + (x || y));
+        System.out.println("!x     = " + (!x));
+
+        System.out.println("\n---- Assignment Operations ----");
+        int c = a; // copy value
+        System.out.println("c = " + c);
+        c += 2;  // c = c + 2
+        System.out.println("c += 2 : " + c);
+        c -= 2;  // c = c - 2
+        System.out.println("c -= 2 : " + c);
+        c *= 2;  // c = c * 2
+        System.out.println("c *= 2 : " + c);
+        c /= 2;  // c = c / 2
+        System.out.println("c /= 2 : " + c);
+        c %= 3;  // c = c % 3
+        System.out.println("c %= 3 : " + c);
+
+        System.out.println("\n---- Unary Operations ----");
+        int d = 7;
+        System.out.println("d = " + d);
+        System.out.println("d++ = " + (d++)); 
+        System.out.println("++d = " + (++d)); 
+        System.out.println("d-- = " + (d--)); 
+        System.out.println("Now d = " + d);
+        System.out.println("--d = " + (--d)); 
+
+        System.out.println("\n---- Bitwise Operations ----");
+        System.out.println("a & b = " + (a & b));
+        System.out.println("a | b = " + (a | b));
+        System.out.println("a ^ b = " + (a ^ b));
+        System.out.println("~a    = " + (~a));
+        System.out.println("a << 1 = " + (a << 1));
+        System.out.println("a >> 1 = " + (a >> 1));
+    }
+}
+output
+---- Arithmetic Operations ----
+a + b = 15
+a - b = 5
+a * b = 50
+a / b = 2
+a % b = 0
+
+---- Relational Operations ----
+a == b : false
+a != b : true
+a > b  : true
+a < b  : false
+a >= b : true
+a <= b : false
+
+---- Logical Operations ----
+x && y = false
+x || y = true
+!x     = false
+
+---- Assignment Operations ----
+c = 10
+c += 2 : 12
+c -= 2 : 10
+c *= 2 : 20
+c /= 2 : 10
+c %= 3 : 1
+
+---- Unary Operations ----
+d = 7
+d++ = 7
+++d = 9
+d-- = 9
+Now d = 8
+--d = 7
+
+---- Bitwise Operations ----
+a & b = 0
+a | b = 15
+a ^ b = 15
+~a    = -11
+a << 1 = 20
+a >> 1 = 5
