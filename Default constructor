@@ -1,34 +1,25 @@
-
+public class DefaultConstructorExample {
+    public static void main(String[] args) {
+        // Creating object, default constructor will be called
+        Student s1 = new Student();
+        s1.display();
+    }
+}
 class Student {
     String name;
     int age;
 
-   
+    // Default constructor
     Student() {
-        System.out.println("Default constructor called");
         name = "Unknown";
-        age = 18;
+        age = 0;
     }
 
-  
     void display() {
-        System.out.println("Name: " + name + ", Age: " + age);
-    }
-}
-
-
-public class DefaultConstructorDemo {
-    public static void main(String[] args) {
-    
-        Student s1 = new Student();
-        s1.display();
-
-        Student s2 = new Student();
-        s2.display();
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
     }
 }
 output
-Default constructor called
-Name: Unknown, Age: 18
-Default constructor called
-Name: Unknown, Age: 18
+Name: Unknown
+Age: 0
