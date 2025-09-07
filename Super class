@@ -1,0 +1,46 @@
+public class SuperKeywordExample {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.displayNames();
+        d.sound();
+    }
+}
+class Animal {
+    String name = "Animal";
+
+    Animal() {
+        System.out.println("Animal constructor called");
+    }
+
+    void sound() {
+        System.out.println("Animal makes a sound");
+    }
+}
+
+
+class Dog extends Animal {
+    String name = "Dog";
+
+    Dog() {
+        super();
+        System.out.println("Dog constructor called");
+    }
+
+    void displayNames() {
+        System.out.println("Child class name: " + name);
+        System.out.println("Parent class name: " + super.name); 
+    }
+
+    @Override
+    void sound() {
+        super.sound(); 
+        System.out.println("Dog barks");
+    }
+}
+output
+Animal constructor called
+Dog constructor called
+Child class name: Dog
+Parent class name: Animal
+Animal makes a sound
+Dog barks
