@@ -1,0 +1,63 @@
+public class StringOperations {
+    public static void main(String[] args) {
+        String s1 = "Hello";
+        String s2 = "World";
+        String s3 = "   Java Programming   ";
+
+      
+        System.out.println("Length of s1: " + s1.length());
+
+        
+        String s4 = s1 + " " + s2;  
+        System.out.println("Concatenation (+): " + s4);
+        System.out.println("Concatenation (concat): " + s1.concat(" " + s2));
+
+        
+        System.out.println("Character at index 1 in s1: " + s1.charAt(1)); 
+
+        
+        System.out.println("Substring of s2 (1 to 4): " + s2.substring(1, 4)); 
+
+        
+        System.out.println("s1 equals 'hello'? " + s1.equals("hello")); 
+        System.out.println("s1 equalsIgnoreCase 'hello'? " + s1.equalsIgnoreCase("hello")); // true
+
+        
+        System.out.println("Uppercase: " + s1.toUpperCase());
+        System.out.println("Lowercase: " + s2.toLowerCase());
+
+        
+        System.out.println("Before trim: '" + s3 + "'");
+        System.out.println("After trim: '" + s3.trim() + "'");
+
+        
+        System.out.println("Replace 'a' with 'o' in s3: " + s3.replace('a', 'o'));
+
+        
+        System.out.println("s1 starts with 'He'? " + s1.startsWith("He"));
+        System.out.println("s2 ends with 'ld'? " + s2.endsWith("ld"));
+
+        
+        char[] chars = s1.toCharArray();
+        System.out.print("Characters in s1: ");
+        for (char c : chars) {
+            System.out.print(c + " ");
+        }
+    }
+}
+output
+Length of s1: 5
+Concatenation (+): Hello World
+Concatenation (concat): Hello World
+Character at index 1 in s1: e
+Substring of s2 (1 to 4): orl
+s1 equals 'hello'? false
+s1 equalsIgnoreCase 'hello'? true
+Uppercase: HELLO
+Lowercase: world
+Before trim: '   Java Programming   '
+After trim: 'Java Programming'
+Replace 'a' with 'o' in s3:    Jovo Progromming   
+s1 starts with 'He'? true
+s2 ends with 'ld'? true
+Characters in s1: H e l l o 
