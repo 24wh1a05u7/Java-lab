@@ -1,0 +1,51 @@
+public class HierarchicalInheritanceExample {
+    public static void main(String[] args) {
+     
+        Dog d = new Dog();
+        Cat c = new Cat();
+        Cow cow = new Cow();
+
+      
+        d.eat();
+        c.eat();
+        cow.eat();
+
+     
+        d.bark();
+        c.meow();
+        cow.moo();
+    }
+}
+class Animal {
+    void eat() {
+        System.out.println("This animal eats food.");
+    }
+}
+
+
+class Dog extends Animal {
+    void bark() {
+        System.out.println("Dog barks: Woof Woof!");
+    }
+}
+
+
+class Cat extends Animal {
+    void meow() {
+        System.out.println("Cat meows: Meow Meow!");
+    }
+}
+
+
+class Cow extends Animal {
+    void moo() {
+        System.out.println("Cow moos: Mooo!");
+    }
+}
+output
+This animal eats food.
+This animal eats food.
+This animal eats food.
+Dog barks: Woof Woof!
+Cat meows: Meow Meow!
+Cow moos: Mooo!
