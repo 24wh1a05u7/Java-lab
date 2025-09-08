@@ -1,0 +1,48 @@
+public class TypeConversionCast {
+    public static void main(String[] args) {
+        
+       
+        int numInt = 100;
+        double numDouble = numInt; 
+        System.out.println("Widening Conversion:");
+        System.out.println("int value: " + numInt);
+        System.out.println("double value: " + numDouble);
+
+    
+        double pi = 3.14159;
+        int piInt = (int) pi; 
+        System.out.println("\nNarrowing Conversion:");
+        System.out.println("double value: " + pi);
+        System.out.println("int value (after casting): " + piInt);
+
+      
+        char ch = 'A';
+        int ascii = ch; 
+        System.out.println("\nChar to Int:");
+        System.out.println("char value: " + ch);
+        System.out.println("ASCII value: " + ascii);
+
+        
+        int code = 66;
+        char letter = (char) code;
+        System.out.println("\nInt to Char:");
+        System.out.println("int value: " + code);
+        System.out.println("char value (after casting): " + letter);
+    }
+}
+output
+Widening Conversion:
+int value: 100
+double value: 100.0
+
+Narrowing Conversion:
+double value: 3.14159
+int value (after casting): 3
+
+Char to Int:
+char value: A
+ASCII value: 65
+
+Int to Char:
+int value: 66
+char value (after casting): B
