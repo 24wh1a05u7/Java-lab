@@ -1,0 +1,41 @@
+public class SuperWithParametersExample {
+    public static void main(String[] args) {
+        Dog d = new Dog("Rocky", 5, "Labrador");
+        d.showDetails();
+    }
+}
+class Animal {
+    String name;
+    int age;
+
+  
+    Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    void display() {
+        System.out.println("Name: " + name + ", Age: " + age);
+    }
+}
+
+
+class Dog extends Animal {
+    String breed;
+
+    
+    Dog(String name, int age, String breed) {
+        super(name, age);
+        this.breed = breed;
+    }
+
+    void showDetails() {
+        display(); 
+        System.out.println("Breed: " + breed);
+    }
+}
+output
+Name: Rocky, Age: 5
+Breed: Labrador
+
+
