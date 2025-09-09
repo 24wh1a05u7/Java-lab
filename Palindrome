@@ -1,0 +1,26 @@
+package bhavya.java;
+import java.util.Scanner;
+
+public class palindrome1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+        String original = input.toLowerCase();
+
+        String reversed = new StringBuilder(original).reverse().toString();
+
+        if (original.equals(reversed)) {
+            System.out.println("\"" + input + "\" is a palindrome.");
+        } else {
+            System.out.println("\"" + input + "\" is NOT a palindrome.");
+        }
+
+        scanner.close();
+    }
+}
+output
+Enter a string: 7
+"7" is a palindrome.
